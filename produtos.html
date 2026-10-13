@@ -138,8 +138,7 @@
     else if(!same){more.innerHTML='<h3>Opções de '+esc(g.title)+'</h3><ul class="flavors mini">'+g.items.map(function(o,k){return tile(o,g.shape,gi,k)}).join('')+'</ul>';more.dataset.g=gi;more.dataset.l=cur;}
     more.querySelectorAll('.flavor').forEach(function(b){var on=+b.dataset.i===ii;b.classList.toggle('sel',on);if(on)b.setAttribute('aria-current','true');else b.removeAttribute('aria-current')});
     var wasItem=!itemBox.hidden;lineBox.hidden=true;itemBox.hidden=false;
-    if(wasItem){try{body.scrollTo({top:0,behavior:'smooth'});dlg.scrollTo({top:0,behavior:'smooth'})}catch(e){body.scrollTop=0;dlg.scrollTop=0}}
-    else{body.scrollTop=0;if(window.innerWidth<820)dlg.scrollTop=0;}
+    body.scrollTop=0;dlg.scrollTop=0;
   }
   dlg.addEventListener('click',function(e){var b=e.target.closest('.flavor');if(b){showItem(+b.dataset.g,+b.dataset.i)}});
   document.getElementById('s-back').addEventListener('click',function(){fill(cur)});
