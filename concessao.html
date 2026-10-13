@@ -14,7 +14,7 @@
 </header>
 
 <main id="topo">
-  <section class="banner photo has-img" style="--img:url('fotos/concessao-topo.jpg')" data-foto="concessao-topo"><div class="wrap"><span class="eyebrow">Parcerias Granpalatto</span><h1>Seja um parceiro Granpalatto</h1><p>Três formas de crescer com uma marca que está no mercado desde 1995: abra sua sorveteria Granpalatto ou com a sua marca, coloque nossos produtos no seu estabelecimento ou leve o novo Quiosque Granpalatto.</p><div class="ctas"><a class="btn btn-white" href="#parcerias">Ver as parcerias</a><a class="btn btn-line-w" href="https://api.whatsapp.com/send?phone=5517981292496&text=Ol%C3%A1%2C%20quero%20ser%20parceiro%20Granpalatto" target="_blank" rel="noopener">Falar no WhatsApp</a></div></div></section>
+  <section class="banner photo has-img" style="--img:url('fotos/concessao-topo.jpg')" data-foto="concessao-topo"><div class="wrap"><span class="eyebrow">Parcerias Granpalatto</span><h1>Seja um parceiro Granpalatto</h1><p>Três formas de crescer com uma marca que está no mercado desde 1995: abra sua sorveteria Granpalatto ou com a sua marca, coloque nossos produtos no seu estabelecimento ou leve o novo Quiosque Granpalatto.</p><div class="ctas"><a class="btn btn-white" href="#parcerias">Ver as parcerias</a><a class="btn btn-line-w" href="#assistente" data-chat>Descobrir meu modelo</a></div></div></section>
 
   <section id="parcerias">
     <div class="wrap">
@@ -43,6 +43,23 @@
           <p>A novidade da Granpalatto: um quiosque com a nossa marca e os nossos produtos. Fale com o time comercial e saiba como ter o seu.</p>
           <a class="btn btn-white" href="#cadastro" data-tipo="Quiosque Granpalatto">Quero saber mais</a>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="tight" id="assistente">
+    <div class="wrap gc-wrap">
+      <div class="gc-intro">
+        <span class="eyebrow">Na dúvida?</span>
+        <h2>Descubra o melhor modelo pra você</h2>
+        <p>Responda algumas perguntas rápidas e a gente indica o caminho que mais combina com o seu momento: sorveteria, freezer no seu comércio ou quiosque.</p>
+        <p class="gc-note">Leva menos de 1 minuto. No final, você fala direto com o nosso time comercial no WhatsApp.</p>
+      </div>
+      <div class="gc" id="gp-chat" aria-live="polite">
+        <div class="gc-head"><span class="gc-av"><img src="logo-branca.png" alt=""></span><div><strong>Assistente Granpalatto</strong><span>Parcerias</span></div></div>
+        <div class="gc-log"></div>
+        <div class="gc-opts"></div>
+        <form class="gc-form" hidden autocomplete="off"><input type="text" aria-label="Sua resposta" maxlength="80"><button type="submit" aria-label="Enviar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form>
       </div>
     </div>
   </section>
@@ -143,5 +160,5 @@ document.getElementById('lead').addEventListener('submit',function(e){
   document.getElementById('lead-ok').hidden=false;
 });
 document.querySelectorAll('[data-tipo]').forEach(function(a){a.addEventListener('click',function(){document.getElementById('l-tipo').value=a.dataset.tipo})});
-</script><script src="video.js"></script>
+</script><script src="video.js"></script><script src="chat-cidades.js"></script><script src="chat.js"></script>
 </body></html>
