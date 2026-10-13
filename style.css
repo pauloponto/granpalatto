@@ -646,3 +646,6 @@ h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.04}
   .sheet .s-media,.sheet .s-media.prod.has-img{min-height:0;height:auto;aspect-ratio:16/10;max-height:46vh}
   .sheet[open]>.s-body{position:relative;z-index:1;background:#fff}
 }
+
+#map{position:absolute;left:-50%;top:-50%;width:200%;height:200%;transform-origin:0 0;will-change:transform;backface-visibility:hidden}
+.map-box>.tip,.map-box>.zoom,.map-box>.map-ui{z-index:2}
