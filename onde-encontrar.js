@@ -197,15 +197,15 @@
   /* ---------- lista ---------- */
   function card(p){
     var dist=st.origin&&st.origin.you?(p.exact?'':'~')+fmtKm(km(st.origin,p)):'';
-    var where=[p.addr,p.hood].filter(Boolean).map(esc).join(' · ');
-    var q=encodeURIComponent([p.name,p.addr,p.hood,p.m.n+' - '+p.m.uf].filter(Boolean).join(', '));
+    var where=p.hood?esc(p.hood)+'<br>':'';
+    var q=encodeURIComponent([p.name,p.hood,p.m.n+' - '+p.m.uf].filter(Boolean).join(', '));
     var route=p.exact?'https://www.google.com/maps/dir/?api=1&destination='+p.lat+','+p.lng:'https://www.google.com/maps/search/?api=1&query='+q;
     return '<article class="store'+(st.sel===p.id?' on':'')+'" id="st-'+p.id+'" data-s="'+p.id+'">'+
       '<div class="store-top"><h3>'+esc(p.name)+'</h3>'+(dist?'<span class="dist">'+dist+'</span>':'')+'</div>'+
       '<span class="kind k-'+p.k+'">'+KL[p.k]+'</span>'+
-      '<p class="addr">'+where+'<br>'+esc(p.m.n)+' – '+p.m.uf+'</p>'+
+      '<p class="addr">'+where+esc(p.m.n)+' – '+p.m.uf+'</p>'+
       (p.exact?'':'<span class="approx">Posição no mapa aproximada</span>')+
-      '<div class="store-foot"><span class="tel">'+esc(p.tel)+'</span><a class="route" href="'+route+'" target="_blank" rel="noopener">Como chegar</a></div></article>';
+      '<div class="store-foot"><span></span><a class="route" href="'+route+'" target="_blank" rel="noopener">Como chegar</a></div></article>';
   }
   function render(){
     var html='';
